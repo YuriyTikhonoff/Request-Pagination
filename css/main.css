@@ -1,8 +1,62 @@
-body {
+* {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 0;
   margin: 0;
-  color: #ccc;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: #f3f3f3;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #eee;
+  height: 60px;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .list {
+  width: 100%;
+  max-width: 768px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  margin-top: 25px;
+}
+
+main .list .item {
+  padding: 15px;
+  border-bottom: 1px solid #ccc;
+}
+
+main .list .item:first-of-type {
+  border-bottom: none;
+}
+
+main .list .item:hover {
+  background-color: rgba(0, 0, 0, 0.05);
 }
 /*# sourceMappingURL=main.css.map */
