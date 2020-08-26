@@ -109,4 +109,13 @@ button.active {
   -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
 }
+
+.listComments {
+  margin-top: 20px;
+  color: #686868;
+}
+
+.title-post {
+  margin: 20px;
+}
 /*# sourceMappingURL=main.css.map */

@@ -23,8 +23,8 @@ function displayNewPost(){
 
 function openNewPost(e){
     //alert(`Here is your id ${e.target.dataset.id}`);
-    let newWindow = window.open(`single-post.html?data=${e.target.dataset.id}`,'_blank')
-    newWindow.document.write(`<p>This is a totally custom function</p>`)
+    let newWindow = window.open(`single-post.html?id=${e.target.dataset.id}`,'_blank')
+    //newWindow.document.write(`<p>This is a totally custom function</p>`)
 
     //newWindow.alert('Ahtung')
     newWindow.console.log("We are at the new window ")
@@ -86,13 +86,14 @@ function displayElements(items, wrapper, rowsPerPage, page) {
         let item = paginatedItems[i]
         let itemElement = document.createElement('div');
         itemElement.classList.add('item');
-        itemElement.innerHTML = `id = ${item.id}, text: ${item.body}` ;
-                itemElement.dataset.id = item.id;
+        itemElement.innerHTML = `id = ${item.id}, text: ${item.body}`;
+        //Set the data attribute with actual id to use it as passed variable in the new window for single post
+        itemElement.dataset.id = item.id;
         itemElement.addEventListener('click', openNewPost)
         wrapper.appendChild(itemElement);
-
     }
 }
+
 //document.querySelectorAll('.item').addEventListener('click', openNewPost());
 function setupPagination(items, wrapper, rowsPerPage){
     wrapper.innerHTML = '';
